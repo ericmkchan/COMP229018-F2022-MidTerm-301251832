@@ -16,6 +16,7 @@ function requireAuth(req, res, next)
     // check if the user is logged in
  
     // ADD YOUR CODE HERE
+    // Check if the current session has an authenticated user
     if (!req.isAuthenticated()) {
         req.session.url = req.originalUrl;
         return res.redirect('/users/signin');
